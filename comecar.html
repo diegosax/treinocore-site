@@ -1,0 +1,493 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="referrer" content="no-referrer"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=DM+Mono:wght@500&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"><title>Seu ponto de partida — Treino Core</title><meta name="description" content="4 perguntas, cerca de 1 minuto: veja por onde começar e o que esperar. Nada do que você responde sai desta página. Sem assinatura."></head><body><div class="wrap"><header><div class="logo"><i></i></div><b>Treino Core</b><nav><a href="index.html">Início</a><a href="privacidade.html">Privacidade</a><a href="termos.html">Termos</a><a href="suporte.html">Suporte</a></nav></header>
+
+<main class="quiz" aria-label="Seu ponto de partida">
+<div class="qtop" id="qtop">
+  <button type="button" class="qback" id="qback" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Voltar</button>
+  <div class="qprog" id="qprog" role="progressbar" aria-label="Progresso" aria-valuemin="0" aria-valuemax="4" aria-valuenow="1" aria-valuetext="Pergunta 1 de 4"><i></i></div>
+  <span class="qcount" id="qcount" aria-hidden="true">1/4</span>
+</div>
+
+<noscript><p class="lead">Este teste precisa de JavaScript ligado. Sem ele, você pode conhecer o app na <a href="index.html">página inicial</a>.</p></noscript>
+
+<section class="qstep" data-step="age" hidden>
+  <p class="eyebrow">4 perguntas · cerca de 1 minuto</p>
+  <h1 id="q-title-age" tabindex="-1">Qual é a sua idade?</h1>
+  <div class="qopts" role="group" aria-labelledby="q-title-age">
+    <button type="button" class="qopt" data-q="age" data-v="18-29" aria-pressed="false">18 a 29 anos</button>
+    <button type="button" class="qopt" data-q="age" data-v="30-39" aria-pressed="false">30 a 39 anos</button>
+    <button type="button" class="qopt" data-q="age" data-v="40-59" aria-pressed="false">40 a 59 anos</button>
+    <button type="button" class="qopt" data-q="age" data-v="60+" aria-pressed="false">60 anos ou mais</button>
+  </div>
+  <button type="button" class="qlink" data-q="age" data-v="minor">Tenho menos de 18 anos</button>
+  <p class="qprivacy">Nada do que você responde sai desta página. Sem cadastro, sem cookies.</p>
+</section>
+
+<section class="qstep" data-step="goal" hidden>
+  <h1 id="q-title-goal" tabindex="-1">O que você quer melhorar?</h1>
+  <div class="qopts" role="group" aria-labelledby="q-title-goal">
+    <button type="button" class="qopt" data-q="goal" data-v="ED" aria-pressed="false">Ereção mais firme</button>
+    <button type="button" class="qopt" data-q="goal" data-v="PE" aria-pressed="false">Mais controle na ejaculação</button>
+    <button type="button" class="qopt" data-q="goal" data-v="BOTH" aria-pressed="false">Os dois</button>
+    <button type="button" class="qopt" data-q="goal" data-v="POST_RP" aria-pressed="false">Recuperação após cirurgia de próstata</button>
+  </div>
+  <p class="qprivacy">Nada do que você responde sai desta página.</p>
+</section>
+
+<section class="qstep" data-step="time" hidden>
+  <h1 id="q-title-time" tabindex="-1">Quanto tempo por dia você tem?</h1>
+  <p class="qhint">Pode ser somando momentos curtos ao longo do dia.</p>
+  <div class="qopts" role="group" aria-labelledby="q-title-time">
+    <button type="button" class="qopt" data-q="time" data-v="5" aria-pressed="false">5 minutos</button>
+    <button type="button" class="qopt" data-q="time" data-v="10" aria-pressed="false">10 minutos</button>
+    <button type="button" class="qopt" data-q="time" data-v="15" aria-pressed="false">15 minutos</button>
+  </div>
+  <p class="qprivacy">Nada do que você responde sai desta página.</p>
+</section>
+
+<section class="qstep" data-step="exp" hidden>
+  <h1 id="q-title-exp" tabindex="-1">Já tentou exercícios pélvicos?</h1>
+  <p class="qhint">Também conhecidos como exercícios de Kegel.</p>
+  <div class="qopts" role="group" aria-labelledby="q-title-exp">
+    <button type="button" class="qopt" data-q="exp" data-v="never" aria-pressed="false">Nunca</button>
+    <button type="button" class="qopt" data-q="exp" data-v="stopped" aria-pressed="false">Já tentei e parei</button>
+    <button type="button" class="qopt" data-q="exp" data-v="sometimes" aria-pressed="false">Faço às vezes</button>
+  </div>
+  <p class="qprivacy">Nada do que você responde sai desta página.</p>
+</section>
+
+<section class="qstep" data-step="minor" hidden>
+  <h1 id="q-title-minor" tabindex="-1">O Treino Core é só para maiores de 18 anos</h1>
+  <p class="lead">Obrigado pelo interesse. Se você tem alguma dúvida sobre o seu corpo ou a sua saúde, converse com um adulto de confiança ou com um profissional de saúde.</p>
+  <p><a href="index.html">Voltar à página inicial</a></p>
+</section>
+
+<section class="qstep qload" data-step="loading" hidden>
+  <svg class="qring" id="qring" viewBox="0 0 132 132" aria-hidden="true"><circle class="track" cx="66" cy="66" r="56"/><circle class="bar" id="qbar" cx="66" cy="66" r="56"/><path class="ok" d="M48 67l12 12 24-26"/></svg>
+  <h1 id="q-title-loading" tabindex="-1">Preparando seu resultado…</h1>
+  <ol class="qsteps" id="qsteps">
+    <li>Organizando seu ponto de partida</li>
+    <li>Escolhendo a trilha que combina com seu objetivo</li>
+    <li>Comparando cada fase com o seu tempo</li>
+  </ol>
+  <p class="sr-only" id="qlive" aria-live="polite"></p>
+</section>
+
+<section class="qstep" data-step="result" id="qresult" hidden></section>
+</main>
+
+<p class="meta">Treino Core é um programa de exercícios e organização de rotina. Não substitui avaliação profissional.</p>
+<footer><span>© 2026 Treino Core</span><a href="privacidade.html">Privacidade</a><a href="termos.html">Termos</a><a href="suporte.html">Suporte</a></footer></div>
+
+<script>
+(() => {
+  'use strict';
+
+  // Links das lojas. Enquanto vazios, a página mostra "Em breve".
+  const APP_STORE_URL = '';
+  const PLAY_URL = '';
+
+  // Recorte do catálogo de módulos: config/catalog/module_catalog_v1.0.0.json
+  // (versão 1.0.0): nome, trilha, duração típica (typicalDays) e gratuidade
+  // (priceTier T0).
+  // Tempo de treino = o que o app mostra no Hoje: sessões do planejador do
+  // motor (Planner._coreSessions + config/protocol/protocol_config_v1.0.0.json,
+  // nível do módulo, da carga inicial à máxima) sem os blocos de respiração,
+  // que o player não executa (D-30), cada sessão arredondada para cima em
+  // minutos (SessionViewModel.playableDurationS). Por isso fica abaixo dos
+  // "~N min por sessão" de prescription.sessions, que ainda contam a respiração.
+  //   n = sessões por dia (número ou [mín, máx]); day = [mín, máx] minutos
+  //   no dia; each = [mín, máx] minutos por sessão.
+  // Se o catálogo ou o protocolo mudarem, atualize aqui.
+  const M = {
+    'FND': {name: 'Fundamentos: encontre seus músculos', track: 'FND', days: 3, n: 2, day: [4, 4], each: [2, 2], free: true},
+    'CORE-1': {name: 'Núcleo 1: ativação', track: 'CORE', days: 12, n: 2, day: [4, 4], each: [2, 2], free: true},
+    'CORE-2': {name: 'Núcleo 2: força de base', track: 'CORE', days: 14, n: 3, day: [9, 12], each: [3, 4]},
+    'DE-2': {name: 'Rigidez: força máxima', track: 'DE', days: 24, n: 3, day: [17, 18], each: [4, 9], desc: 'Treino de força máxima focado nos músculos da rigidez, dentro dos limites seguros do protocolo.'},
+    'EP-X': {name: 'Controle rápido', track: 'EP', days: 24, n: 3, day: [15, 16], each: [4, 8], desc: 'Versão do treino de força com foco em rapidez e em soltar a musculatura.'},
+    'CORE-4': {name: 'Núcleo 4: potência e função', track: 'CORE', days: 24, n: [3, 4], day: [15, 19], each: [4, 7]},
+    'MNT-1': {name: 'Manutenção', track: 'MNT', days: null, n: 1, day: [4, 4], each: [4, 4], note: 'no mínimo 3 a 4 dias por semana'},
+    'PRP-1': {name: 'Pós-cirurgia: continência inicial', track: 'PRP', days: 16, n: 2, day: [4, 4], each: [2, 2], free: true},
+    'PRP-2': {name: 'Pós-cirurgia: força', track: 'PRP', days: 30, n: 3, day: [9, 16], each: [3, 8]},
+    'PRP-3': {name: 'Pós-cirurgia: função', track: 'PRP', days: 24, n: [3, 4], day: [15, 19], each: [4, 7]},
+    'DE-1': {name: 'Ereção: entender e cuidar', track: 'DE'},
+    'DE-3': {name: 'Ereção na prática', track: 'DE'},
+    'DE-4': {name: 'Cardio para ereção', track: 'DE'},
+    'EP-1': {name: 'Conhecendo sua excitação', track: 'EP'},
+    'EP-2': {name: 'Parar e recomeçar', track: 'EP'},
+    'EP-3': {name: 'Estimulação contínua', track: 'EP'},
+    'EP-4': {name: 'Controle a dois', track: 'EP'},
+  };
+  const TRACKS = {DE: 'Disfunção erétil', EP: 'Ejaculação precoce', PRP: 'Pós-prostatectomia'};
+
+  // Caminho principal pelas arestas do catálogo (PROGRESS e, no Núcleo 2,
+  // BRANCH pelo objetivo). Uma lista interna é uma escolha entre variantes
+  // do Núcleo 3. "side" são os módulos paralelos da trilha.
+  const PATHS = {
+    ED: {main: ['FND', 'CORE-1', 'CORE-2', ['DE-2'], 'CORE-4', 'MNT-1'], side: ['DE-1', 'DE-4', 'DE-3']},
+    PE: {main: ['FND', 'CORE-1', 'CORE-2', ['EP-X'], 'CORE-4', 'MNT-1'], side: ['EP-1', 'EP-2', 'EP-3', 'EP-4']},
+    BOTH: {main: ['FND', 'CORE-1', 'CORE-2', ['DE-2', 'EP-X'], 'CORE-4', 'MNT-1'], side: ['DE-1', 'EP-1']},
+    POST_RP: {main: ['PRP-1', 'PRP-2', 'PRP-3', 'MNT-1'], side: ['DE-1']},
+  };
+
+  const GOAL_LABEL = {ED: 'Ereção mais firme', PE: 'Mais controle na ejaculação', BOTH: 'Ereção e controle', POST_RP: 'Recuperação após cirurgia de próstata'};
+  const GOAL_LEAD = {
+    ED: 'Primeiro, os fundamentos e a força de base. Depois, a fase de rigidez, com foco nos músculos ligados à ereção.',
+    PE: 'Primeiro, os fundamentos e a força de base. Depois, o controle rápido: contrair e, principalmente, saber soltar.',
+    BOTH: 'Primeiro, os fundamentos e a força de base. Depois, você escolhe entre a fase de rigidez e a de controle rápido.',
+    POST_RP: 'Um começo cuidadoso, com carga leve. Depois, força e uso no dia a dia, no seu ritmo.',
+  };
+  // Tom das metas do app ("nos estudos", nunca promessa).
+  const WEEK4_CORE = 'O que costuma mudar primeiro: contrações mais fortes e mais longas no autoteste, e os primeiros ganhos de controle.';
+  const WEEK4 = {
+    ED: WEEK4_CORE,
+    PE: WEEK4_CORE,
+    BOTH: WEEK4_CORE,
+    POST_RP: 'O objetivo desta fase: reativar a musculatura com carga leve e reduzir as perdas de urina.',
+  };
+  const WEEK12_ED = 'Num estudo com 55 homens e acompanhamento de fisioterapeuta, cerca de 3 em cada 4 melhoraram a firmeza em 3 a 6 meses de treino. Sem acompanhamento, o efeito costuma ser menor.';
+  const WEEK12_PE = 'Nos estudos com treino estruturado, o tempo até ejacular passou de cerca de 30 s para cerca de 2 min em 12 semanas. Sem acompanhamento, o efeito costuma ser menor.';
+  const WEEK12 = {
+    ED: [WEEK12_ED],
+    PE: [WEEK12_PE],
+    BOTH: [WEEK12_ED, WEEK12_PE],
+    POST_RP: ['Nos estudos, treinar depois da cirurgia ajudou a recuperar a continência mais cedo. A ereção costuma levar mais de 3 meses.'],
+  };
+
+  const QUESTIONS = ['age', 'goal', 'time', 'exp'];
+  const answers = {};
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+
+  let current = null;
+  let timers = [];
+  let locked = false;
+
+  function el(tag, props, ...kids) {
+    const n = document.createElement(tag);
+    if (props) {
+      for (const [k, v] of Object.entries(props)) {
+        if (v == null || v === false) continue;
+        if (k === 'class') n.className = v;
+        else n.setAttribute(k, v === true ? '' : String(v));
+      }
+    }
+    for (const k of kids.flat()) if (k != null && k !== false) n.append(k);
+    return n;
+  }
+
+  function clearTimers() {
+    timers.forEach(clearTimeout);
+    timers = [];
+  }
+
+  function later(ms, fn) {
+    timers.push(setTimeout(fn, ms));
+  }
+
+  // --- Navegação (um passo por tela; o voltar do navegador também funciona)
+
+  function show(name, mode = 'push', focus = true) {
+    clearTimers();
+    if (name === 'result') renderResult();
+    locked = false;
+    current = name;
+    for (const s of $$('.qstep')) {
+      const on = s.dataset.step === name;
+      s.hidden = !on;
+      s.classList.toggle('qenter', on && !reduced);
+    }
+    const qi = QUESTIONS.indexOf(name);
+    const inQuiz = qi >= 0 || name === 'loading';
+    $('#qtop').hidden = !inQuiz;
+    $('#qback').hidden = qi <= 0;
+    const step = qi >= 0 ? qi + 1 : QUESTIONS.length;
+    const bar = $('#qprog');
+    bar.setAttribute('aria-valuenow', String(step));
+    bar.setAttribute('aria-valuetext', `Pergunta ${step} de ${QUESTIONS.length}`);
+    $('i', bar).style.width = `${(step / QUESTIONS.length) * 100}%`;
+    $('#qcount').textContent = `${step}/${QUESTIONS.length}`;
+    if (qi >= 0) {
+      for (const b of $$(`[data-q="${name}"].qopt`)) b.setAttribute('aria-pressed', String(b.dataset.v === answers[name]));
+    }
+    if (mode === 'push') history.pushState({q: name}, '');
+    else if (mode === 'replace') history.replaceState({q: name}, '');
+    window.scrollTo(0, 0);
+    const h = $(`[data-step="${name}"] h1`);
+    if (h && focus) h.focus({preventScroll: true});
+    if (name === 'loading') runLoading();
+  }
+
+  function firstMissing() {
+    return QUESTIONS.find((q) => !answers[q]);
+  }
+
+  function choose(q, v, btn) {
+    if (locked) return;
+    locked = true;
+    answers[q] = v;
+    if (btn && btn.classList.contains('qopt')) {
+      for (const b of $$(`[data-q="${q}"].qopt`)) b.setAttribute('aria-pressed', String(b === btn));
+    }
+    // Um instante para ver a escolha marcada antes de seguir.
+    later(reduced ? 0 : 180, () => {
+      if (q === 'age' && v === 'minor') return show('minor');
+      const next = QUESTIONS[QUESTIONS.indexOf(q) + 1];
+      show(next || 'loading');
+    });
+  }
+
+  document.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-q]');
+    if (b) choose(b.dataset.q, b.dataset.v, b);
+  });
+  $('#qback').addEventListener('click', () => history.back());
+  window.addEventListener('popstate', (e) => {
+    const q = e.state && e.state.q;
+    if (!q) return;
+    // O resultado e o carregamento dependem das respostas desta visita.
+    if ((q === 'loading' || q === 'result') && firstMissing()) return show(firstMissing(), 'replace');
+    show(q, 'none');
+  });
+
+  // --- Carregamento (~3 s). Os passos dizem o que a página faz de fato:
+  // escolhe a trilha do catálogo pelo objetivo e compara o tempo de cada
+  // fase com o tempo informado (o plano do app não muda com essa resposta).
+
+  function runLoading() {
+    if (firstMissing()) return show(firstMissing(), 'replace');
+    const items = $$('#qsteps li');
+    const ring = $('#qring');
+    const bar = $('#qbar');
+    const live = $('#qlive');
+    const c = 2 * Math.PI * 56;
+    bar.style.strokeDasharray = `${c}`;
+    ring.classList.remove('done');
+    items.forEach((li) => li.classList.remove('on', 'ok'));
+    const fill = (k) => { bar.style.strokeDashoffset = `${c * (1 - k / items.length)}`; };
+    if (reduced) {
+      fill(items.length);
+      items.forEach((li) => li.classList.add('ok'));
+      ring.classList.add('done');
+      live.textContent = 'Pronto.';
+      later(600, () => show('result', 'replace'));
+      return;
+    }
+    bar.style.transition = 'none';
+    fill(0);
+    void bar.getBoundingClientRect();
+    bar.style.transition = '';
+    items.forEach((li, i) => {
+      later(150 + i * 900, () => {
+        li.classList.add('on');
+        live.textContent = li.textContent;
+        fill(i + 1);
+      });
+      later(150 + i * 900 + 700, () => li.classList.add('ok'));
+    });
+    later(150 + (items.length - 1) * 900 + 760, () => {
+      ring.classList.add('done');
+      live.textContent = 'Pronto.';
+    });
+    later(3100, () => show('result', 'replace'));
+  }
+
+  // --- Resultado
+
+  const week = (d) => Math.max(1, Math.ceil(d / 7));
+
+  function timeline(main) {
+    let day = 1;
+    return main.map((step) => {
+      const ids = Array.isArray(step) ? step : [step];
+      const days = Math.max(0, ...ids.map((i) => M[i].days || 0)) || null;
+      const t = {ids, start: day, end: days ? day + days - 1 : null};
+      if (days) day += days;
+      return t;
+    });
+  }
+
+  function weekLabel(t) {
+    if (t.end == null) return `a partir da semana ${week(t.start)}`;
+    const a = week(t.start);
+    const b = week(t.end);
+    return a === b ? `semana ${a}` : `semanas ${a}–${b}`;
+  }
+
+  function phaseAt(tl, day) {
+    return tl.find((t) => day >= t.start && (t.end == null || day <= t.end)) || tl[tl.length - 1];
+  }
+
+  const names = (ids) => ids.map((i) => M[i].name).join(' ou ');
+
+  // --- Tempo de treino por fase (ver o comentário de M)
+
+  const span = ([a, b]) => (a === b ? `${a}` : `${a}–${b}`);
+  const nMax = (n) => (Array.isArray(n) ? n[1] : n);
+  const nLabel = (n) => (Array.isArray(n) ? `${n[0]} ou ${n[1]}` : `${n}`);
+  const sessWord = (n) => (nMax(n) === 1 ? 'sessão' : 'sessões');
+
+  // Junta variantes de um passo (Rigidez ou Controle rápido) numa faixa só.
+  function load(ids) {
+    const ms = ids.map((i) => M[i]);
+    const lo = (k) => Math.min(...ms.map((m) => m[k][0]));
+    const hi = (k) => Math.max(...ms.map((m) => m[k][1]));
+    const ns = ms.flatMap((m) => [].concat(m.n));
+    const a = Math.min(...ns);
+    const b = Math.max(...ns);
+    return {n: a === b ? a : [a, b], day: [lo('day'), hi('day')], each: [lo('each'), hi('each')], note: ms[0].note || null};
+  }
+
+  // "3 sessões/dia · ~9–12 min no total"
+  function sessionsOf(ids) {
+    const s = load(ids);
+    const per = `${nLabel(s.n)} ${sessWord(s.n)}/dia`;
+    const mins = nMax(s.n) === 1 ? `~${span(s.day)} min` : `~${span(s.day)} min no total`;
+    return [per, mins, s.note].filter(Boolean).join(' · ');
+  }
+
+  // O tempo por fase, sem prometer que "cabe": o começo é curto e as
+  // sessões crescem; a frase final compara com o tempo que a pessoa disse.
+  function dayTexts(tl, minutes) {
+    const phases = tl.map((t) => ({t, s: load(t.ids)}));
+    const start = phases[0].s;
+    let k = 0;
+    while (k < phases.length && phases[k].t.end != null && phases[k].s.day[1] === start.day[1]) k++;
+    const startWeeks = Math.max(1, Math.round(phases[Math.max(0, k - 1)].t.end / 7));
+    const grow = phases.slice(k).filter((p) => p.t.end != null);
+    const out = [
+      `${startWeeks === 1 ? 'Na primeira semana' : `Nas primeiras ${startWeeks} semanas`}: cerca de ${start.day[1]} min por dia, em ${nLabel(start.n)} ${sessWord(start.n)} curtas de ~${span(start.each)} min.`,
+    ];
+    if (grow.length) {
+      const lo = Math.min(...grow.map((p) => p.s.day[0]));
+      const hi = Math.max(...grow.map((p) => p.s.day[1]));
+      const each = Math.max(...grow.map((p) => p.s.each[1]));
+      const ns = grow.flatMap((p) => [].concat(p.s.n));
+      const n = Math.min(...ns) === Math.max(...ns) ? ns[0] : [Math.min(...ns), Math.max(...ns)];
+      const from = week(grow[0].t.start);
+      const to = week(grow[grow.length - 1].t.end);
+      const mnt = phases.find((p) => p.t.end == null);
+      out.push(`Depois, as sessões crescem aos poucos. Entre as semanas ${from} e ${to}: de ~${lo} a ~${hi} min por dia, em ${nLabel(n)} sessões de até ${each} min, cada uma num momento diferente do dia.${mnt ? ` Na manutenção, volta a ~${span(mnt.s.day)} min por dia.` : ''}`);
+    }
+    // Primeira fase que passa do tempo informado (pelo teto da faixa).
+    const overIdx = phases.findIndex((p) => p.s.day[1] > minutes);
+    if (overIdx < 0) {
+      out.push(`Seus ${minutes} minutos cobrem o treino do dia em todas as fases.`);
+    } else if (overIdx === 0) {
+      out.push(`Já no começo, o treino do dia passa dos seus ${minutes} minutos: vale reservar um pouco mais de tempo.`);
+    } else {
+      const over = phases[overIdx];
+      const each = Math.max(...phases.slice(overIdx).map((p) => p.s.each[1]));
+      const w = week(over.t.start);
+      const covered = `Seus ${minutes} minutos cobrem o treino do dia ${w <= 2 ? 'na primeira semana' : `nas primeiras ${w - 1} semanas`}.`;
+      out.push(`${covered} ${each <= minutes
+        ? `A partir da semana ${w}, o total do dia passa disso, mas cada sessão cabe nesse tempo, em momentos diferentes do dia.`
+        : `A partir da semana ${w}, o total do dia e algumas sessões passam disso: vale reservar mais tempo nessa fase.`}`);
+    }
+    return out;
+  }
+
+  function expText(exp, goal) {
+    if (exp === 'never') return 'Você começa com uma aula curta para encontrar os músculos certos e um autoteste guiado.';
+    if (exp === 'stopped') return 'Sessões curtas, lembrete no horário que você escolher e progresso semana a semana ajudam a manter o ritmo.';
+    return goal === 'POST_RP'
+      ? 'O autoteste mede seu ponto de partida e o plano ajusta a carga a ele.'
+      : 'Você já tem uma base. Se o autoteste mostrar boa força e controle, o app dispensa o Núcleo 1 e você segue direto para o Núcleo 2.';
+  }
+
+  // Botão só para loja com link; sem link, texto simples (nada de botão
+  // desabilitado).
+  function stores() {
+    const links = [[APP_STORE_URL, 'Baixar na App Store', 'na App Store'], [PLAY_URL, 'Baixar no Google Play', 'no Google Play']];
+    const ready = links.filter(([u]) => u);
+    const missing = links.filter(([u]) => !u).map(([, , n]) => n);
+    return el('div', {class: 'stores'},
+      ready.map(([u, label]) => el('a', {class: 'btn', href: u, rel: 'noopener'}, label)),
+      missing.length ? el('p', {class: 'soon'}, `Em breve ${missing.join(' e ')}`) : null);
+  }
+
+  function renderResult() {
+    const goal = answers.goal;
+    const p = PATHS[goal];
+    const tl = timeline(p.main);
+    const at4 = phaseAt(tl, 28);
+    const at12 = phaseAt(tl, 84);
+    const minutes = Number(answers.time);
+    const variants = p.main.find(Array.isArray) || [];
+
+    const tagged = new Set();
+    const path = el('ol', {class: 'path'}, tl.map((t, i) => {
+      const m = M[t.ids[0]];
+      // Etiqueta da trilha só no primeiro módulo de cada trilha.
+      const showTrack = TRACKS[m.track] && t.ids.length === 1 && !tagged.has(m.track);
+      if (showTrack) tagged.add(m.track);
+      const trackTag = showTrack ? el('span', {class: 'tag trk'}, `Trilha ${TRACKS[m.track]}`) : null;
+      const freeTag = t.ids.every((id) => M[id].free) ? el('span', {class: 'tag'}, 'Gratuito') : null;
+      const sessions = sessionsOf(t.ids);
+      let desc = null;
+      if (t.ids.length > 1) desc = 'Você escolhe uma das duas. As duas valem como o Núcleo 3.';
+      else if (variants.includes(t.ids[0])) desc = `${M[t.ids[0]].desc} Vale como o Núcleo 3.`;
+      return el('li', {class: i === 0 ? 'first' : null},
+        el('b', null, names(t.ids)), trackTag, freeTag,
+        el('span', {class: 'when'}, `${weekLabel(t)} · ${sessions}`),
+        desc ? el('span', {class: 'desc'}, desc) : null);
+    }));
+
+    const sideTracks = [...new Set(p.side.map((id) => TRACKS[M[id].track]))];
+    const side = el('p', {class: 'side'},
+      el('span', {class: 'cap'}, goal === 'POST_RP'
+        ? 'Mais adiante, se fizer sentido'
+        : `Em paralelo · ${sideTracks.length > 1 ? 'trilhas' : 'trilha'} ${sideTracks.join(' e ')}`),
+      p.side.map((id) => M[id].name).join(' · '));
+
+    const careful = goal === 'POST_RP'
+      ? el('div', {class: 'careful', role: 'note'},
+          el('b', null, 'Antes de começar, fale com sua equipe cirúrgica.'),
+          el('p', null, 'Os exercícios depois da cirurgia de próstata devem começar só com a liberação dela. No app, a trilha pós-cirurgia só abre depois que você confirma essa liberação.'))
+      : null;
+
+    const node = $('#qresult');
+    node.replaceChildren(...[
+      el('p', {class: 'eyebrow'}, GOAL_LABEL[goal]),
+      el('h1', {id: 'q-title-result', tabindex: '-1'}, 'Seu ponto de partida'),
+      el('p', {class: 'lead'}, GOAL_LEAD[goal]),
+      careful,
+      el('h2', null, 'Sua sequência'),
+      el('p', {class: 'small'}, 'Durações típicas. O avanço depende dos seus autotestes, não do calendário.'),
+      path,
+      side,
+      el('p', {class: 'small'}, 'Os módulos marcados como gratuitos já vêm abertos. Os outros abrem com pontos que você ganha ao seguir o seu plano.'),
+      el('h2', null, 'No seu dia'),
+      el('div', {class: 'card day'},
+        dayTexts(tl, minutes).map((s) => el('p', null, s)),
+        el('p', null, expText(answers.exp, goal))),
+      el('h2', null, 'O que esperar'),
+      el('div', {class: 'expect'},
+        el('div', {class: 'card'},
+          el('span', {class: 'cap'}, 'Em 4 semanas'),
+          el('p', {class: 'phase'}, `Fase típica: ${names(at4.ids)}`),
+          el('p', null, WEEK4[goal])),
+        el('div', {class: 'card'},
+          el('span', {class: 'cap'}, 'Em 12 semanas'),
+          el('p', {class: 'phase'}, `Fase típica: ${names(at12.ids)}`),
+          WEEK12[goal].map((s) => el('p', null, s)))),
+      el('p', {class: 'small'}, 'Resultados variam de pessoa para pessoa. O app não substitui avaliação médica.'),
+      el('div', {class: 'done-cta'},
+        el('ul', {class: 'trust', 'aria-label': 'Compromissos do app'},
+          el('li', null, 'Sem assinatura.'), el('li', null, 'Sem anúncios.'), el('li', null, 'Dados cifrados.')),
+        el('p', {class: 'small'}, 'Dados cifrados no aparelho e na transmissão. Sem anúncios, sem rastreamento, sem venda de dados.'),
+        stores(),
+        el('p', {class: 'small'}, 'No app, você começa pelo protocolo base e confirma esse objetivo em Personalizar, logo no começo.'),
+        el('button', {type: 'button', class: 'qlink', id: 'qagain'}, 'Refazer as perguntas')),
+    ].filter(Boolean));
+    $('#qagain').addEventListener('click', () => {
+      for (const k of QUESTIONS) delete answers[k];
+      show('age');
+    });
+  }
+
+  // Ao abrir (ou recarregar), sempre do começo: nada fica guardado.
+  show('age', 'replace', false);
+})();
+</script>
+</body></html>
