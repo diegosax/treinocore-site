@@ -75,6 +75,16 @@
 <section class="qstep" data-step="result" id="qresult" hidden></section>
 </main>
 
+<!-- Telas do app no resultado, logo depois de "Sua sequência" (clonadas pelo
+     script). Ficam aqui, em HTML, para tools/publish_site.sh conferir os
+     arquivos de img/. Se uma faltar, a figura some. -->
+<template id="tpl-shots">
+<div class="shots duo" role="group" aria-label="Telas do app">
+<figure><div class="frame"><img src="img/today.png" width="240" height="520" loading="lazy" decoding="async" alt="Tela Hoje do app no primeiro dia: duas sessões de cerca de 2 min e o próximo passo." onerror="this.closest('figure').hidden=true"></div><figcaption>Dia 1: duas sessões curtas</figcaption></figure>
+<figure><div class="frame"><img src="img/aula.png" width="240" height="520" loading="lazy" decoding="async" alt="Aula de identificação, passo 1: o comando principal, puxar a base do pênis para dentro." onerror="this.closest('figure').hidden=true"></div><figcaption>Aula: o músculo certo em 4 passos</figcaption></figure>
+</div>
+</template>
+
 <p class="meta">Treino Core é um programa de exercícios e organização de rotina. Não substitui avaliação profissional.</p>
 <footer><span>© 2026 Treino Core</span><a href="privacidade.html">Privacidade</a><a href="termos.html">Termos</a><a href="suporte.html">Suporte</a></footer></div>
 
@@ -136,7 +146,8 @@
     BOTH: 'Primeiro, os fundamentos e a força de base. Depois, você escolhe entre a fase de rigidez e a de controle rápido.',
     POST_RP: 'Um começo cuidadoso, com carga leve. Depois, força e uso no dia a dia, no seu ritmo.',
   };
-  // Tom das metas do app ("nos estudos", nunca promessa).
+  // Tom das metas do app: o estudo citado com tamanho e acompanhamento,
+  // nunca promessa ("Nos estudos" só quando há mais de um).
   const WEEK4_CORE = 'O que costuma mudar primeiro: contrações mais fortes e mais longas no autoteste, e os primeiros ganhos de controle.';
   const WEEK4 = {
     ED: WEEK4_CORE,
@@ -145,7 +156,7 @@
     POST_RP: 'O objetivo desta fase: reativar a musculatura com carga leve e reduzir as perdas de urina.',
   };
   const WEEK12_ED = 'Num estudo com 55 homens e acompanhamento de fisioterapeuta, cerca de 3 em cada 4 melhoraram a firmeza em 3 a 6 meses de treino. Sem acompanhamento, o efeito costuma ser menor.';
-  const WEEK12_PE = 'Nos estudos com treino estruturado, o tempo até ejacular passou de cerca de 30 s para cerca de 2 min em 12 semanas. Sem acompanhamento, o efeito costuma ser menor.';
+  const WEEK12_PE = 'Num estudo pequeno, com 40 homens e acompanhamento de fisioterapeuta, o tempo médio até ejacular passou de cerca de 30 s para cerca de 2 min em 12 semanas. Sem acompanhamento, o efeito costuma ser menor.';
   const WEEK12 = {
     ED: [WEEK12_ED],
     PE: [WEEK12_PE],
@@ -457,6 +468,7 @@
       path,
       side,
       el('p', {class: 'small'}, 'Os módulos marcados como gratuitos já vêm abertos. Os outros abrem com pontos que você ganha ao seguir o seu plano.'),
+      $('#tpl-shots').content.firstElementChild.cloneNode(true),
       el('h2', null, 'No seu dia'),
       el('div', {class: 'card day'},
         dayTexts(tl, minutes).map((s) => el('p', null, s)),

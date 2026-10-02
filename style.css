@@ -35,6 +35,14 @@ table{border-collapse:collapse;width:100%;font-size:14px}td,th{text-align:left;p
 .shots img{display:block;width:280px;max-width:100%;height:auto;aspect-ratio:1179/2556;border-radius:36px;background:var(--surface);object-fit:cover}
 .shots figcaption{margin-top:12px;font-size:14px;color:var(--text2);text-align:center}
 @media (min-width:960px){.shots{margin:48px -100px 0;padding:4px 0 8px;justify-content:center;gap:20px;overflow:visible}}
+/* Duas telas no resultado do funil (240–252 px): no celular rolam na faixa,
+   a partir de 600 px ficam lado a lado na coluna de 560 px. */
+.shots.duo{margin:24px -20px 0}
+.shots.duo figure{width:254px}
+.shots.duo img{width:240px;border-radius:31px}
+.shots.duo .frame{border-radius:37px}
+.shots.duo figcaption{font-size:13px}
+@media (min-width:600px){.shots.duo{margin:28px 0 0;padding:4px 0 8px;justify-content:center;overflow:visible}.shots.duo figure{width:266px}.shots.duo img{width:252px;border-radius:33px}.shots.duo .frame{border-radius:39px}}
 .trust{list-style:none;padding:0;margin:20px 0 0;display:flex;flex-wrap:wrap;gap:10px 22px}
 .trust li{display:flex;align-items:center;gap:8px;color:var(--text);font-weight:500;font-size:15px}
 .trust li::before,.qsteps li.ok::before{content:"";flex:none;width:20px;height:20px;border-radius:50%;background:var(--mint) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%230B0D12' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/14px no-repeat}
